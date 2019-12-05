@@ -35,4 +35,9 @@ flask db init
 
 flask db migrate -m "book table"
 
-flask db upgrade# accounts2
+flask db upgrade
+
+To register a new user use 
+http://localhost/register
+
+
