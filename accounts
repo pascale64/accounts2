@@ -1,0 +1,4 @@
+from bdf import create_app, db
+from bdf.models import User, Books
+
+app = create_app()
