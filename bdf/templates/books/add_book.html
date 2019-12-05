@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main">
+    <h2>Stock</h2>
+        <div class="items">
+            {% for form in forms %}
+            <form method="post" role="form" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                <div class="one">{{ form.id.label }}<br>{{ form.id(class="input") }}</div>
+                <div class="two">{{ form.date.label }}<br>{{ form.date(class="input") }}</div>
+                <div class="three">{{ form.description.label }}<br>{{ form.description(class="input") }}</div>
+                <div class="two">{{ form.debit.label }}<br>{{ form.debit(class="input") }}</div>
+                <div class="two">{{ form.credit.label }}<br>{{ form.credit(class="input") }}</div>
+                <div class="two">{{ form.montant.label }}<br>{{ form.montant(class="input") }}</div>
+                <div class="two">{{ form.AUX.label }}<br>{{ form.AUX(class="input") }}</div>
+                <div class="one">{{ form.type.label }}<br>{{ form.type(class="input") }}</div>
+                <div class="one">{{ form.REF.label }}<br>{{ form.REF(class="input") }}</div>
+                <div class="one">{{ form.JN.label }}<br>{{ form.JN(class="input") }}</div>
+                <div class="one">{{ form.PID.label }}<br>{{ form.PID(class="input") }}</div>
+                <div class="one">{{ form.CT.label }}<br>{{ form.CT(class="input") }}</div>
+                <div class="one">{{ form.submit(class="submit") }}</div>
+            </form>
+        </div>
+        {% endfor %}
+        {{ pagination.links }}
+    </div>
+</div>
+
+{% endblock %}
+

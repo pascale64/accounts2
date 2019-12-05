@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main">
+    <h2>Books</h2>
+    <div class="books"><a href="{{ url_for('books.add_book') }}">Add a new Item</a></div>
+    <div class="stock">
+        {{ pagination.info }}
+        {{ pagination.links }}
+        <div class="data">
+            <div id="id">ID</div>
+            <div id="date">DATE</div>
+            <div id="description">Description</div>
+            <div id="AUX">Credit</div>
+            <div id="AUX">Debit</div>
+            <div id="AUX">Montant</div>
+            <div id="AUX">Auxilliere</div>
+            <div id="id">Type</div>
+            <div id="id">REF</div>
+            <div id="id">JN</div>
+            <div id="id">PID</div>
+            <div id="id">CT</div>
+            <div id="id">Modify</div>
+            <div id="id">Delete</div>
+        </div>
+        {% for form in forms %}
+            <div class="data">
+                <form method="post" role="form" enctype="multipart/form-data">
+                    {{ form.hidden_tag() }}
+                    <div class="1">{{ form.id(class="input") }}</div>
+                    <div class="2">{{ form.date(class="input") }}</div>
+                    <div class="3">{{ form.description(class="input") }}</div>
+                    <div class="2">{{ form.debit(class="input") }}</div>
+                    <div class="2">{{ form.credit(class="input") }}</div>
+                    <div class="2">{{ form.montant(class="input") }}</div>
+                    <div class="2">{{ form.AUX(class="input") }}</div>
+                    <div class="1">{{ form.type(class="input") }}</div>
+                    <div class="1">{{ form.REF(class="input") }}</div>
+                    <div class="1">{{ form.JN(class="input") }}</div>
+                    <div class="1">{{ form.PID(class="input") }}</div>
+                    <div class="1">{{ form.CT(class="input") }}</div>
+                    <div class="in">{{ form.modify(class="submit") }}</div>
+                    <div class="in">{{ form.delete(class="submit") }}</div>
+                </form>
+            </div>
+        {% endfor %}
+        {{ pagination.links }}
+    </div>
+</div>
+{% endblock %}

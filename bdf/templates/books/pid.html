@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main">
+    <h2>Period Id</h2>
+    <div class="books"><a href="{{ url_for('books.upload_pid') }}">Upload General csv</a></div>
+    <div class="books"><a href="{{ url_for('books.add_pid') }}">Add a new General</a></div>
+    <div class="stock">
+        {{ pagination.info }}
+        {{ pagination.links }}
+        {% for form in forms %}
+        <div class="aux">
+           <form method="post" role="form" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                <div>{{ form.id(class="input") }} </div>
+                <div class="two">{{ form.start.label }}<br>{{ form.start(class="input") }}</div>
+                <div class="two">{{ form.end.label }}<br>{{ form.end(class="input") }}</div>
+                <div class="in">{{ form.modify(class="submit") }}</div>
+                <div class="in">{{ form.delete(class="submit") }}</div>
+            </form>
+        </div>
+        {% endfor %}
+        {{ pagination.links }}
+    </div>
+</div>
+{% endblock %}

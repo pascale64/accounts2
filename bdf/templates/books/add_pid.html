@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="main">
+    <div class="stock">
+        <div class="form">
+             <h2>Add a new item to Period id</h2>
+             <form action="{{ url_for('books.add_pid') }}" method="post", enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                <div class="two">{{ form.id.label(class="label") }}<br>{{ form.id(class="input") }} </div>
+                <div class="two">{{ form.start.label }}<br>{{ form.start(class="input") }}</div>
+                <div class="two">{{ form.end.label }}<br>{{ form.end(class="input") }}</div>
+                <div class="two">{{ form.submit(class="submit") }}</div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
