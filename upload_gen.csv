@@ -1,0 +1,108 @@
+0,no account
+101300,CAPITAL MADAME X
+101400,CAPITAL MONSIEUR Y
+106100,RESERVE LEGALE
+109000,CAPITAL SOUSCIT NON APPELÉ
+110000,REPORT A NOUVEAU SOLDE 
+119000,Report a nouveau debiteur
+120000,RESULTAT DE L'EXERCISE
+158000,provision pour risques
+218100,installations immobilisations
+275000,INSTALLATIONS AGENCEMENTS
+281810,AMORT INSTALLATIONS
+310000,STOCK MAT PREMIERES
+370000,STOCK MARCHANDISE
+401000,Fournisseur
+411000,CLIENTS
+444000,ETAT IMPOTS
+445000,TVA A DÉCAISSER
+445202,TVA due intracommunitaire
+445620,TVA ded IMMO
+445662,TVA ded intracommunitaire
+445663,TVA 20%
+445664,"TVA 2,1%"
+445665,"TVA 5,5%"
+445667,TVA 7%
+445668,TVA 10%
+445670,CREDIT DE TVA
+445682,TVA DED 20% A REGULARISIER
+445720,TVA COLLECTER 20%
+445782,TVA COL 20% A REGULARISIER
+445810,TVA A REGULARISIER
+455000,Madame
+455001,Monsieur
+457000,compte actionaires affection benéfice
+501000,LBPAM
+512000,LA POSTE
+514000,PAYPAL
+515000,BB
+516000,FF
+517000,AMAZON
+530000,CAISSE
+580000,MOVEMENT INT
+584000,MOVEMENT PAYPAL
+585000,MOVEMENT BB
+586000,MOVEMENT FF
+587000,AMAZON
+601003,Achats stockés mat. prem. HT 20%
+601010,Achats stockés mat. prem. TTC
+601020,Achats stockés mat. prem. CE
+602612,Embellages
+603100,Variation stock mat prem
+603700,Variation stock marchandise
+606002,MAT Fournitures 20%
+606302,Fourn. entr. petit équip. HT 20%
+606307,Fourn entretien et petit equip 7%
+606310,Entretien TTC
+606320,Entretien CE
+606402,Fourn. administratives HT 20%
+606802,Gazole HT
+607002,Achats marchandises HT 20%
+607010,Achats marchandises TTC
+607020,Achats marchandises CE
+612202,Redevance crédit bail HT 20%
+613002,Locations HT 20%
+614010,Charges locatives
+615502,REPARATIONS
+616300,Assurances
+622200,Commission ventes EBAY
+622602,Honoraires HT 20%
+622610,Honoraires TTC 20%
+623102,Pub. annonces HT 20%
+623110,Pub. annonces TTC
+624002,Transports HT 20%
+624005,"Transports HT 5,5%"
+624010,Transports TTC
+625002,"Déplacements, voyages HT 20%"
+625005,"Déplacements, voyages HT 5,5%"
+625007,"Déplacements, voyages HT 7%"
+625010,"Déplacements, voyages HT 10%"
+625300,Forfait kilométrique gérant
+626002,Télécommunications HT 20%
+626010,Télécommunications TTC
+626011,Frais de PTT
+627002,Frais de gestion 
+627010,Services bancaires TTC
+628000,"Autres services extérieurs HT 19,6%"
+635110,CFE
+644000,Rémunération du gérant
+644001,Rémunération du gérant
+646000,Cotisat. soc. pers. de l'exploitant
+646100,Cotisat. soc. pers. de l'exploitant
+666000,compte de charge de gestion
+671200,Penalties et amandes
+681100,Dotations amortissements
+681500,dotation provisions
+695100,impôts bénéfices
+700000,ACHAT
+707000,Vente TTC 20%
+707001,ventes TTC FR
+707010,Vente sur le marge valeur de marchandise €
+707011,Vente sur le marge FR
+707020,Vente hors EU 
+708000,Livraison TTC EU
+708001,Livraison TTC FR
+708010,Livraison TTC Hors EU
+764000,revenues mob placemente LAPBM
+781500,Réprise provision de exploitation
+791000,transfert de charges
