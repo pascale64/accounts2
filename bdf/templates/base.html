@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>{% block title %}{% endblock %} - accounts</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+    <div class="row">
+        <div class="navbar">
+            {% if current_user.is_anonymous %}
+            <div><a href="{{ url_for('auth.login') }}">Login</a></div>
+            {% else %}
+            <div><a href="{{ url_for('auth.logout') }}">Logout</a></div>
+            {% endif %}
+            <div><a href="{{ url_for('data.index') }}">Home</a></div>
+            <div><a href="{{ url_for('books.books' ) }}">Books</a></div>
+            <div><a href="{{ url_for('stock.stock') }}">Stock</a></div>
+            <div><a href="{{ url_for('uploads.uploads') }}">Uploads</a></div>
+            <div><a href="{{ url_for('aux.aux') }}">Auxilliere</a></div>
+            <div><a href="{{ url_for('gen.gen') }}">General</a></div>
+            <div><a href="{{ url_for('books.pid' ) }}">Period</a></div>
+            <div><a href="{{ url_for('books.jn' ) }}">Journal</a></div>
+            <div><a href="{{ url_for('books.type' ) }}">Type</a></div>
+            <div><h2>{{ current_user.username }}</h2></div>
+        </div>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-info" role="alert">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+            {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
