@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="main">
+    <div class="stock">
+        <div class="form">
+             <h2>Add a new item to General</h2>
+             <form action="{{ url_for('gen.add_gen') }}" method="post", enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                <div class="two">{{ form.id.label(class="label") }}<br>{{ form.id(class="input") }} </div>
+                <div class="two">{{ form.name.label }}<br>{{ form.name(class="input") }}</div>
+                <div class="two">{{ form.submit(class="submit") }}</div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
