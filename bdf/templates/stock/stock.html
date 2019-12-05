@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main">
+    <h2>Stock</h2>
+    <div class="books"><a href="{{ url_for('stock.upload_stock') }}">Upload Stock csv</a></div>
+    <div class="books"><a href="{{ url_for('stock.add_stock') }}">Add a new Item</a></div>
+    <div class="stock">
+        {{ pagination.info }}
+        {{ pagination.links }}
+        {% for form in forms %}
+        <div class="items">
+            <div class="c0">IMAGE</div>
+            <form method="post" role="form" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                <div class="out">{{ form.id.label }}<br>{{ form.id(class="input") }} </div>
+                <div class="out">{{ form.date.label }}<br>{{ form.date(class="input") }}</div>
+                <div class="out">{{ form.description.label }}<br>{{ form.description(class="input") }}</div>
+                <div class="out">{{ form.event.label }}<br>{{ form.event(class="input") }}</div>
+                <div class="out">{{ form.achat.label }}<br>{{ form.achat(class="input") }}</div>
+                <div class="out">{{ form.vente.label }}<br>{{ form.vente(class="input") }}</div>
+                <div class="in">{{ form.QT.label }}<br>{{ form.QT(class="input") }}</div>
+                <div class="in">{{ form.sold.label }}<br>{{ form.sold(class="input") }}</div>
+                <div class="in">{{ form.modify(class="submit") }}</div>
+                <div class="in">{{ form.delete(class="submit") }}</div>
+            </form>
+        </div>
+        {% endfor %}
+        {{ pagination.links }}
+    </div>
+</div>
+{% endblock %}

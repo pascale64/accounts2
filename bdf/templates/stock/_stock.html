@@ -1,0 +1,17 @@
+    <div class="stock">
+        <div class="c0"><img src="{{ s.image_url }}" alt="{{ s.image_filename }}"></div>
+
+            <form action="{{ url_for('stock.stock', id=s.id) }}" method="post", enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                <div>SKU<br><a href="{{ url_for( 'stock._edit_stock') }}/{{ s.id }}">Edit  {{s.id }}</a></div>
+                <div>Date of Purchase<br>{{ s.date }}</div>
+                <div>Description<br>{{ s.description }}</div>
+                <div>Market<br>{{ s.event }}</div>
+                <div>Purchase Price<br>{{ s.achat }}</div>
+                <div>Sale Price<br>{{ s.vente }}</div>
+                <div>Sold<br>{{ form.sold(class="input") }}</div>
+                <div>{{ form.submit(class="submit") }}</div>
+            </form>
+
+    </div>
+

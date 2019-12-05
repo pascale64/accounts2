@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="main">
+        <div class="form">
+             <h2>Add a new item to stock</h2>
+             <form action="" method="post", enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                <div>{{ form.id.label }} {{ form.id(class="input") }} </div>
+                <div>{{ form.date.label }} {{ form.date(class="input") }}</div>
+                <div>{{ form.description.label }} {{ form.description(class="input") }}</div>
+                <div>{{ form.event.label }} {{ form.event(class="input") }}</div>
+                <div>{{ form.achat.label }} {{ form.achat(class="input") }}</div>
+                <div>{{ form.vente.label }} {{ form.vente(class="input") }}</div>
+                <div>{{ form.sold.label }} {{ form.sold(class="input") }}</div>
+                <div>{{ form.submit(class="submit") }}</div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

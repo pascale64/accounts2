@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="stock">
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            <div>{{ form.id.label }} {{ form.id(class="input") }} </div>
+            <div>{{ form.date.label }} {{ form.date(class="input") }}</div>
+            <div>{{ form.description.label }} {{ form.description(class="input") }}</div>
+            <div>{{ form.event.label }} {{ form.event(class="input") }}</div>
+            <div>{{ form.achat.label }} {{ form.achat(class="input") }}</div>
+            <div>{{ form.vente.label }} {{ form.vente(class="input") }}</div>
+            <div>{{ form.sold.label }} {{ form.sold(class="input") }}</div>
+        </form>
+    </div>
+{% endblock %}
